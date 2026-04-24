@@ -22,7 +22,7 @@ export default function Hero() {
           <h1 className="leading-tight text-deep-blue">
             Transforming Industries with{' '}
             <span className="bg-gradient-to-r from-sky-primary to-teal-accent bg-clip-text text-transparent">
-              IIoT, Digitalization & Smart Automation
+              IoT, Digitalization & Smart Automation
             </span>
           </h1>
 
@@ -97,7 +97,7 @@ export default function Hero() {
             whileHover={{ scale: 1.05, rotate: 5 }}
           >
             <Image
-              src="/Image 1.png"
+              src="/Image2.jpeg"
               alt="Manufacturing Solution"
               fill
               className="object-cover"
