@@ -17,7 +17,8 @@ export async function POST(request: Request) {
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT) || 465,
-      secure: true,
+      secure: Number(process.env.SMTP_PORT) === 465,
+
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
@@ -45,10 +46,10 @@ export async function POST(request: Request) {
     await transporter.sendMail(mailOptions);
 
     return NextResponse.json({ success: true, message: 'Message sent successfully' });
-  } catch (error) {
+  } catch (error: any) {
     console.error('Contact form error:', error);
     return NextResponse.json(
-      { error: 'Failed to send message' },
+      { error: 'Failed to send message', details: error.message },
       { status: 500 }
     );
   }
