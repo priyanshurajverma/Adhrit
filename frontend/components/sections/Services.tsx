@@ -13,34 +13,34 @@ import {
 export default function Services() {
   const services = [
     {
+      icon: Network,
+      title: 'Industrial IoT (IIoT)',
+      desc: 'Connected devices, data acquisition, and real-time analytics platforms',
+    },
+    {
+      icon: Globe,
+      title: 'Digitalization',
+      desc: 'Complete digital overhaul of manufacturing operations aligned with Industry 4.0',
+    },
+    {
       icon: Cpu,
       title: 'Industrial Automation',
-      desc: 'End-to-end automation solutions for manufacturing processes',
+      desc: 'End-to-end automation solutions for smart manufacturing processes',
     },
     {
       icon: Wrench,
-      title: 'Machine Retrofit',
+      title: 'Machine Retrofit & Upgrades',
       desc: 'Modernize existing machinery with advanced control systems',
     },
     {
       icon: Camera,
-      title: 'Vision Systems',
+      title: 'Inspection & Vision Systems',
       desc: 'AI-powered visual inspection and quality control systems',
     },
     {
-      icon: Network,
-      title: 'IoT Solutions',
-      desc: 'Connected devices and real-time data analytics platform',
-    },
-    {
       icon: Zap,
-      title: 'Machine Integration',
-      desc: 'Seamless integration of multiple machines and systems',
-    },
-    {
-      icon: Globe,
-      title: 'Digital Transformation',
-      desc: 'Complete digital overhaul of manufacturing operations',
+      title: 'IT-OT Integration',
+      desc: 'Seamless bridging of software intelligence and industrial control systems',
     },
   ];
 

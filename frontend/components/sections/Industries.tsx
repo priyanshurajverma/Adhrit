@@ -6,6 +6,8 @@ import {
   Zap,
   Pill,
   Package,
+  Activity,
+  Droplets,
 } from 'lucide-react';
 
 export default function Industries() {
@@ -27,8 +29,18 @@ export default function Industries() {
     },
     {
       icon: Pill,
-      name: 'Pharma',
+      name: 'Pharmaceuticals',
       desc: 'Pharmaceutical and healthcare manufacturing',
+    },
+    {
+      icon: Zap,
+      name: 'Energy & Utilities',
+      desc: 'Power generation, distribution, and smart grid automation',
+    },
+    {
+      icon: Droplets,
+      name: 'Process Industries',
+      desc: 'Chemical, oil & gas, and continuous process manufacturing',
     },
   ];
 
@@ -46,7 +58,7 @@ export default function Industries() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {industries.map((industry, i) => (
             <motion.div
               key={i}

@@ -13,9 +13,11 @@ export default function About() {
           className="text-center mb-16"
         >
           <h2 className="section-title">About Adhrit Technologies</h2>
-          <p className="section-subtitle">
-            Leading the digital transformation in manufacturing with innovative automation solutions
-          </p>
+          <div className="section-subtitle space-y-4 max-w-3xl mx-auto">
+            <p>Adhrit Technologies is an engineering-driven company focused on Industrial IoT (IIoT), digitalization, and automation solutions.</p>
+            <p>We specialize in delivering end-to-end smart industrial systems—from data acquisition to intelligent decision-making platforms.</p>
+            <p>We help industries transform conventional operations into smart, connected, and efficient factories aligned with Industry 4.0.</p>
+          </div>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -23,17 +25,17 @@ export default function About() {
             {
               icon: Target,
               title: 'Our Mission',
-              desc: 'Empower manufacturers with intelligent automation to maximize efficiency, reduce downtime, and achieve sustainable growth.',
+              desc: 'To deliver innovative, efficient, and scalable industrial solutions—from coding to control systems.',
             },
             {
               icon: Lightbulb,
               title: 'Our Vision',
-              desc: 'Create a future where smart factories operate seamlessly, driving innovation and productivity across the globe.',
+              desc: 'To lead industrial transformation by integrating digital intelligence with control systems.',
             },
             {
               icon: CheckCircle,
-              title: 'Our Commitment',
-              desc: 'Deliver world-class solutions with unparalleled expertise, customer focus, and continuous innovation.',
+              title: 'What Makes Us Different',
+              desc: 'Advanced software development (Python, Node.js), industrial automation expertise (PLC, SCADA, HMI), and seamless IT-OT integration capabilities.',
             },
           ].map((item, i) => (
             <motion.div
@@ -60,11 +62,12 @@ export default function About() {
               <h3 className="text-2xl font-bold text-deep-blue mb-4">Why Choose Adhrit?</h3>
               <ul className="space-y-3">
                 {[
-                  'Proven expertise with 10+ years in industrial automation',
-                  'Certified partnerships with industry leaders (EXOR, Eurotherm, Mitsubishi)',
-                  'Customized solutions tailored to your manufacturing needs',
-                  'End-to-end support from consultation to implementation',
-                  'Dedicated team of engineers and technical specialists',
+                  '20+ years experience',
+                  'Software + Automation expertise',
+                  'Real shopfloor understanding',
+                  'Custom-built solutions',
+                  'ROI-focused approach',
+                  'Reliable support',
                 ].map((item, i) => (
                   <motion.li
                     key={i}
@@ -81,8 +84,8 @@ export default function About() {
             </div>
             <div className="flex-1 bg-gradient-to-br from-sky-primary to-teal-accent rounded-lg p-8 text-white flex items-center justify-center">
               <div className="text-center space-y-4">
-                <p className="text-4xl font-bold">10+</p>
-                <p className="text-lg">Years of Excellence in Industrial Automation</p>
+                <p className="text-4xl font-bold">20+</p>
+                <p className="text-lg">Years of Excellence in Industrial Automation & Software</p>
               </div>
             </div>
           </div>

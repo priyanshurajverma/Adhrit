@@ -31,10 +31,10 @@ export default function Footer() {
           >
             <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <h3 className="text-2xl font-bold bg-gradient-to-r from-sky-primary to-teal-accent bg-clip-text text-transparent">
-                ADHRIT
+                ADHRIT TECHNOLOGIES
               </h3>
             </div>
-            <p className="text-gray-300">Transforming manufacturing through intelligent automation and digital solutions.</p>
+            <p className="text-gray-300">From Coding to Control Systems</p>
           </motion.div>
 
           {/* Links */}
@@ -67,11 +67,11 @@ export default function Footer() {
           <div className="flex flex-col gap-4 text-sm">
             <div className="flex items-center gap-2">
               <Mail size={18} className="text-sky-primary" />
-              <span>info@adhrittechnologies.in</span>
+              <span>sales@adhrittechnologies.in</span>
             </div>
             <div className="flex items-center gap-2">
               <Phone size={18} className="text-sky-primary" />
-              <span>+91 (0) 1234 567890</span>
+              <span>+91-8796091105</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin size={18} className="text-sky-primary" />

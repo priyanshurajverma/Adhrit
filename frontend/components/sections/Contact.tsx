@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Globe } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
@@ -22,7 +22,7 @@ export default function Contact() {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
+      const apiUrl = '/api';
       await axios.post(`${apiUrl}/contact`, data);
       setSubmitStatus('success');
       reset();
@@ -55,17 +55,17 @@ export default function Contact() {
             {
               icon: Mail,
               title: 'Email',
-              value: 'info@adhrittechnologies.in',
+              value: 'sales@adhrittechnologies.in',
             },
             {
               icon: Phone,
               title: 'Phone',
-              value: '+91 (0) 1234 567890',
+              value: '+91-8796091105',
             },
             {
-              icon: MapPin,
-              title: 'Location',
-              value: 'India',
+              icon: Globe,
+              title: 'Website',
+              value: 'www.adhrittechnologies.in',
             },
           ].map((contact, i) => (
             <motion.div

@@ -20,15 +20,20 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="leading-tight text-deep-blue">
-            Transforming Manufacturing Through{' '}
+            Transforming Industries with{' '}
             <span className="bg-gradient-to-r from-sky-primary to-teal-accent bg-clip-text text-transparent">
-              Intelligent Automation
+              IIoT, Digitalization & Smart Automation
             </span>
           </h1>
 
-          <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
-            Unlock the full potential of your manufacturing operations with cutting-edge automation solutions, advanced vision systems, and comprehensive IoT integration.
-          </p>
+          <div className="text-lg text-gray-600 leading-relaxed max-w-xl space-y-4">
+            <p>
+              At Adhrit Technologies, we bridge the gap between software intelligence and industrial control systems. From writing efficient code to deploying robust automation solutions, we deliver end-to-end digital transformation for modern industries.
+            </p>
+            <p>
+              With 20+ years of combined industry experience, we bring deep domain expertise, practical implementation knowledge, and proven engineering capabilities to every project.
+            </p>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <motion.button
@@ -42,7 +47,7 @@ export default function Hero() {
                 }
               }}
             >
-              Get in Touch <ChevronRight size={18} />
+              Contact Us <ChevronRight size={18} />
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -64,7 +69,7 @@ export default function Hero() {
             {[
               { value: '500+', label: 'Projects' },
               { value: '50+', label: 'Clients' },
-              { value: '10+', label: 'Years' },
+              { value: '20+', label: 'Years Experience' },
             ].map((stat, i) => (
               <motion.div
                 key={i}
