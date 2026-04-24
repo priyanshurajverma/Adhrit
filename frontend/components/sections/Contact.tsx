@@ -17,6 +17,7 @@ interface ContactFormData {
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
   const { register, handleSubmit, reset, formState: { errors } } = useForm<ContactFormData>();
 
   const onSubmit = async (data: ContactFormData) => {
@@ -27,10 +28,15 @@ export default function Contact() {
       setSubmitStatus('success');
       reset();
       setTimeout(() => setSubmitStatus('idle'), 3000);
-    } catch (error) {
+    } catch (error: any) {
       setSubmitStatus('error');
       console.error('Error submitting form:', error);
-      setTimeout(() => setSubmitStatus('idle'), 3000);
+      if (error.response && error.response.data && error.response.data.details) {
+        setErrorMessage(error.response.data.details);
+      } else {
+        setErrorMessage('Failed to send message. Please try again.');
+      }
+      setTimeout(() => setSubmitStatus('idle'), 15000);
     } finally {
       setIsSubmitting(false);
     }
@@ -173,8 +179,8 @@ export default function Contact() {
               </div>
             )}
             {submitStatus === 'error' && (
-              <div className="p-4 bg-red-100 text-red-800 rounded-lg">
-                ✗ Failed to send message. Please try again.
+              <div className="p-4 bg-red-100 text-red-800 rounded-lg whitespace-pre-wrap break-words">
+                ✗ {errorMessage}
               </div>
             )}
           </motion.form>
