@@ -8,9 +8,19 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
-    Product: ['Services', 'Solutions', 'Technology', 'Industries'],
-    Company: ['About', 'Blog', 'Careers', 'Contact'],
-    Legal: ['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'Disclaimer'],
+    Product: [
+      { label: 'Services', href: '/#services' },
+      { label: 'Solutions', href: '/#solutions' },
+      { label: 'Technology', href: '/#technology' },
+    ],
+    Company: [
+      { label: 'About', href: '/#about' },
+      { label: 'Contact', href: '/#contact' },
+    ],
+    Legal: [
+      { label: 'Privacy Policy', href: '/privacy-policy' },
+      { label: 'Terms of Service', href: '/terms-of-service' },
+    ],
     Social: [
       { icon: Linkedin, href: '#', label: 'LinkedIn' },
       { icon: Facebook, href: '#', label: 'Facebook' },
@@ -47,9 +57,9 @@ export default function Footer() {
               <h4 className="font-semibold mb-4">{category}</h4>
               <ul className="space-y-2">
                 {links.map((link, i) => (
-                  <li key={typeof link === 'string' ? link : `link-${i}`}>
-                    <a href="#" className="text-gray-300 hover:text-sky-primary transition-colors">
-                      {typeof link === 'string' ? link : (link as any).label}
+                  <li key={i}>
+                    <a href={link.href} className="text-gray-300 hover:text-sky-primary transition-colors">
+                      {link.label}
                     </a>
                   </li>
                 ))}
