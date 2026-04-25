@@ -22,7 +22,7 @@ export default function Hero() {
           <h1 className="leading-tight text-deep-blue">
             Transforming Industries with{' '}
             <span className="bg-gradient-to-r from-sky-primary to-teal-accent bg-clip-text text-transparent">
-              IoT, Digitalization & Smart Automation
+              IIOT, Digitalization & Smart Automation
             </span>
           </h1>
 
