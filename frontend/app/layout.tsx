@@ -1,11 +1,15 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1.0,
+};
 
 export const metadata: Metadata = {
   title: 'Adhrit Technologies - Industrial Automation Solutions',
   description: 'Transform your manufacturing with intelligent automation, IoT solutions, and digital transformation services.',
   keywords: 'Industrial Automation, Machine Retrofit, Vision Systems, IoT, Digital Transformation, OEE, Manufacturing',
-  viewport: 'width=device-width, initial-scale=1.0',
   robots: 'index, follow',
   openGraph: {
     type: 'website',

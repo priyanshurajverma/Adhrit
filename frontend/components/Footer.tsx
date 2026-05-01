@@ -40,9 +40,13 @@ export default function Footer() {
             className="space-y-4"
           >
             <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-sky-primary to-teal-accent bg-clip-text text-transparent">
-                ADHRIT TECHNOLOGIES
-              </h3>
+              <Image
+                src="/adhrit-logo.svg"
+                alt="Adhrit Technologies"
+                width={220}
+                height={55}
+                className="h-10 md:h-12 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-gray-300">From Coding to Control Systems</p>
           </motion.div>

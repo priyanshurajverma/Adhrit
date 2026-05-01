@@ -39,9 +39,14 @@ export default function Navbar() {
           className="flex items-center gap-2 cursor-pointer"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-sky-primary to-teal-accent bg-clip-text text-transparent">
-            ADHRIT
-          </span>
+          <Image
+            src="/adhrit-logo.svg"
+            alt="Adhrit Technologies"
+            width={180}
+            height={45}
+            className="h-8 md:h-10 w-auto"
+            priority
+          />
         </motion.div>
 
         {/* Desktop Menu */}
