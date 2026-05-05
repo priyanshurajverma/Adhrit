@@ -109,14 +109,3 @@ export default function Hero() {
     </section>
   );
 }
-              alt="Manufacturing Solution"
-              fill
-              className="object-cover"
-              priority
-            />
-          </motion.div>
-        </motion.div>
-      </div>
-    </section>
-  );
-}
