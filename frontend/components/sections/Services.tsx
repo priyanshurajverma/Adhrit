@@ -65,11 +65,11 @@ export default function Services() {
 
   return (
     <section id="services" className="section-padding bg-sky-light">
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
           <h2 className="section-title">Our Services</h2>
           <p className="section-subtitle">
@@ -78,7 +78,7 @@ export default function Services() {
         </motion.div>
 
         <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -91,14 +91,14 @@ export default function Services() {
             >
               <motion.div
                 whileHover={{ scale: 1.1, rotate: 5 }}
-                className="inline-block p-4 bg-sky-primary bg-opacity-20 rounded-lg mb-4"
+                className="inline-block p-3 md:p-4 bg-sky-primary bg-opacity-20 rounded-lg mb-3 md:mb-4"
               >
-                <service.icon size={32} className="text-sky-primary" />
+                <service.icon size={28} className="text-sky-primary md:w-8 md:h-8" />
               </motion.div>
-              <h3 className="text-xl font-bold text-deep-blue mb-3">{service.title}</h3>
-              <p className="text-gray-600">{service.desc}</p>
+              <h3 className="text-lg md:text-xl font-bold text-deep-blue mb-2 md:mb-3">{service.title}</h3>
+              <p className="text-gray-600 text-sm md:text-base">{service.desc}</p>
               <motion.div
-                className="mt-4 flex items-center gap-2 text-sky-primary font-semibold cursor-pointer"
+                className="mt-3 md:mt-4 flex items-center gap-2 text-sky-primary font-semibold cursor-pointer text-sm md:text-base"
                 whileHover={{ x: 5 }}
               >
                 Learn More →
@@ -110,15 +110,15 @@ export default function Services() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="mt-16 p-8 bg-gradient-to-r from-deep-blue to-teal-accent rounded-xl text-white text-center"
+          className="mt-12 md:mt-16 p-6 md:p-8 bg-gradient-to-r from-deep-blue to-teal-accent rounded-xl text-white text-center"
         >
-          <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Manufacturing?</h3>
-          <p className="mb-6 max-w-2xl mx-auto">
+          <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Ready to Transform Your Manufacturing?</h3>
+          <p className="mb-4 md:mb-6 max-w-2xl mx-auto text-sm md:text-base">
             Let our experts analyze your current setup and create a customized automation strategy tailored to your needs.
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
-            className="bg-white text-deep-blue px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all"
+            className="bg-white text-deep-blue px-6 md:px-8 py-2 md:py-3 rounded-lg font-semibold hover:shadow-lg transition-all text-sm md:text-base"
           >
             Schedule Consultation
           </motion.button>

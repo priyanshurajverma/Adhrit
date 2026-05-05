@@ -29,10 +29,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-deep-blue text-white section-padding">
-      <div className="max-w-7xl mx-auto">
+    <footer className="bg-deep-blue text-white section-padding w-full overflow-x-hidden">
+      <div className="w-full max-w-7xl mx-auto">
         {/* Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12">
           {/* Brand */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -45,10 +45,10 @@ export default function Footer() {
                 alt="Adhrit Technologies"
                 width={220}
                 height={55}
-                className="h-10 md:h-12 w-auto brightness-0 invert"
+                className="h-8 md:h-10 w-auto brightness-0 invert"
               />
             </div>
-            <p className="text-gray-300">From Coding to Control Systems</p>
+            <p className="text-gray-300 text-sm md:text-base">From Coding to Control Systems</p>
           </motion.div>
 
           {/* Links */}
@@ -58,11 +58,11 @@ export default function Footer() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              <h4 className="font-semibold mb-4">{category}</h4>
+              <h4 className="font-semibold mb-3 md:mb-4 text-sm md:text-base">{category}</h4>
               <ul className="space-y-2">
                 {links.map((link, i) => (
                   <li key={i}>
-                    <a href={link.href} className="text-gray-300 hover:text-sky-primary transition-colors">
+                    <a href={link.href} className="text-gray-300 hover:text-sky-primary transition-colors text-sm md:text-base">
                       {link.label}
                     </a>
                   </li>
@@ -73,22 +73,22 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="gradient-divider mb-8"></div>
+        <div className="gradient-divider mb-6 md:mb-8"></div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-8">
           {/* Contact Info */}
-          <div className="flex flex-col gap-4 text-sm">
+          <div className="flex flex-col gap-3 md:gap-4 text-xs md:text-sm w-full md:w-auto">
             <div className="flex items-center gap-2">
-              <Mail size={18} className="text-sky-primary" />
-              <span>sales@adhrittechnologies.in</span>
+              <Mail size={18} className="text-sky-primary flex-shrink-0" />
+              <span className="break-all">sales@adhrittechnologies.in</span>
             </div>
             <div className="flex items-center gap-2">
-              <Phone size={18} className="text-sky-primary" />
+              <Phone size={18} className="text-sky-primary flex-shrink-0" />
               <span>+91-8796091105</span>
             </div>
             <div className="flex items-center gap-2">
-              <MapPin size={18} className="text-sky-primary" />
+              <MapPin size={18} className="text-sky-primary flex-shrink-0" />
               <span>India</span>
             </div>
           </div>

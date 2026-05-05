@@ -46,11 +46,11 @@ export default function Industries() {
 
   return (
     <section className="section-padding bg-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
           <h2 className="section-title">Industries We Serve</h2>
           <p className="section-subtitle">
@@ -58,7 +58,7 @@ export default function Industries() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {industries.map((industry, i) => (
             <motion.div
               key={i}
@@ -70,12 +70,12 @@ export default function Industries() {
             >
               <motion.div
                 whileHover={{ scale: 1.2, rotate: 10 }}
-                className="inline-block p-4 bg-sky-primary bg-opacity-20 rounded-lg mb-4"
+                className="inline-block p-3 md:p-4 bg-sky-primary bg-opacity-20 rounded-lg mb-3 md:mb-4"
               >
-                <industry.icon size={32} className="text-sky-primary" />
+                <industry.icon size={28} className="text-sky-primary md:w-8 md:h-8" />
               </motion.div>
-              <h3 className="text-lg font-bold text-deep-blue mb-2">{industry.name}</h3>
-              <p className="text-gray-600 text-sm">{industry.desc}</p>
+              <h3 className="text-base md:text-lg font-bold text-deep-blue mb-1 md:mb-2">{industry.name}</h3>
+              <p className="text-gray-600 text-xs md:text-sm">{industry.desc}</p>
             </motion.div>
           ))}
         </div>

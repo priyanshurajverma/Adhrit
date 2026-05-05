@@ -5,11 +5,15 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
   }
 
   body {
-    @apply bg-white text-gray-900;
+    @apply bg-white text-gray-900 overflow-x-hidden;
     font-family: 'Inter', 'Poppins', sans-serif;
+    width: 100vw;
+    max-width: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -31,32 +35,32 @@
 
 @layer components {
   .btn-primary {
-    @apply px-8 py-3 rounded-lg font-semibold transition-all duration-300 cursor-pointer;
+    @apply px-6 md:px-8 py-2 md:py-3 rounded-lg font-semibold transition-all duration-300 cursor-pointer;
     @apply bg-gradient-to-r from-sky-primary to-teal-accent text-white;
-    @apply hover:shadow-lg hover:scale-105 active:scale-95;
+    @apply hover:shadow-lg hover:scale-105 active:scale-95 whitespace-nowrap;
   }
 
   .btn-secondary {
-    @apply px-8 py-3 rounded-lg font-semibold transition-all duration-300 cursor-pointer;
+    @apply px-6 md:px-8 py-2 md:py-3 rounded-lg font-semibold transition-all duration-300 cursor-pointer;
     @apply bg-white text-deep-blue border-2 border-deep-blue;
-    @apply hover:bg-deep-blue hover:text-white;
+    @apply hover:bg-deep-blue hover:text-white whitespace-nowrap;
   }
 
   .section-padding {
-    @apply py-16 md:py-24 px-4 md:px-8;
+    @apply py-12 md:py-16 lg:py-24 px-4 sm:px-6 lg:px-8;
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-deep-blue mb-4 text-center;
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold text-deep-blue mb-3 md:mb-4 text-center;
   }
 
   .section-subtitle {
-    @apply text-lg text-gray-600 text-center max-w-2xl mx-auto mb-12;
+    @apply text-base sm:text-lg text-gray-600 text-center max-w-2xl mx-auto mb-8 md:mb-12;
   }
 
   .card {
     @apply rounded-xl shadow-md hover:shadow-xl transition-all duration-300;
-    @apply hover:scale-105 p-6 bg-white border border-gray-100;
+    @apply hover:scale-105 p-4 md:p-6 bg-white border border-gray-100;
   }
 
   .gradient-divider {

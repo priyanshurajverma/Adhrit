@@ -45,11 +45,11 @@ export default function Solutions() {
 
   return (
     <section id="solutions" className="section-padding bg-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
           <h2 className="section-title">Solutions & Expertise</h2>
           <p className="section-subtitle">
@@ -57,7 +57,7 @@ export default function Solutions() {
           </p>
         </motion.div>
 
-        <div className="space-y-6">
+        <div className="space-y-4 md:space-y-6">
           {solutions.map((solution, i) => (
             <motion.div
               key={i}
@@ -66,25 +66,25 @@ export default function Solutions() {
               transition={{ delay: i * 0.1 }}
               className="card"
             >
-              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-                <div className="flex gap-6 flex-1">
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-6">
+                <div className="flex gap-3 md:gap-6 flex-1 w-full">
                   <motion.div
                     whileHover={{ scale: 1.1 }}
-                    className="p-4 bg-gradient-to-br from-sky-primary to-teal-accent rounded-lg text-white flex-shrink-0"
+                    className="p-3 md:p-4 bg-gradient-to-br from-sky-primary to-teal-accent rounded-lg text-white flex-shrink-0"
                   >
-                    <solution.icon size={32} />
+                    <solution.icon size={24} className="md:w-8 md:h-8" />
                   </motion.div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-deep-blue mb-2">{solution.title}</h3>
-                    <p className="text-gray-600">{solution.desc}</p>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg md:text-xl font-bold text-deep-blue mb-1 md:mb-2">{solution.title}</h3>
+                    <p className="text-gray-600 text-xs md:text-sm lg:text-base">{solution.desc}</p>
                   </div>
                 </div>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="bg-sky-light px-6 py-3 rounded-lg text-center flex-shrink-0"
+                  className="bg-sky-light px-4 md:px-6 py-2 md:py-3 rounded-lg text-center flex-shrink-0 w-full md:w-auto"
                 >
-                  <p className="text-sm text-gray-600">Average Result</p>
-                  <p className="font-bold text-teal-accent text-lg">{solution.metrics}</p>
+                  <p className="text-xs md:text-sm text-gray-600">Average Result</p>
+                  <p className="font-bold text-teal-accent text-base md:text-lg">{solution.metrics}</p>
                 </motion.div>
               </div>
             </motion.div>
